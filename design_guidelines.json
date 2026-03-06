@@ -1,0 +1,186 @@
+{
+  "project_name": "Mi Siembra Inteligente",
+  "design_philosophy": {
+    "identity": "Organic Tech - A precision tool that feels like a garden. Warm, tactile, yet data-rich.",
+    "core_principles": [
+      "Nature is messy, UI is clean: Use whitespace to tame the complexity of biology.",
+      "Touch-First: Buttons and cards must be thumb-friendly (min 44px hit areas).",
+      "Data needs sunlight: Charts and logs should feel airy, not cramped.",
+      "Color as Status: Green is good, Yellow is warning (water needed), Red is critical (pest/disease)."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "installation_instructions": "Import fonts from Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap');",
+    "usage_rules": {
+      "headings": "Use Outfit for all Headings (h1-h4). Tracking tight (-0.02em). Weight 600 or 700.",
+      "body": "Use Manrope for all UI text, labels, and inputs. Excellent readability for numbers.",
+      "styles": {
+        "h1": "text-4xl md:text-5xl font-bold tracking-tight text-foreground",
+        "h2": "text-2xl md:text-3xl font-semibold tracking-tight",
+        "h3": "text-xl font-semibold text-foreground/90",
+        "label": "text-xs font-bold uppercase tracking-wider text-muted-foreground",
+        "body_lg": "text-lg leading-relaxed",
+        "body_sm": "text-sm text-muted-foreground"
+      }
+    }
+  },
+  "colors": {
+    "palette": {
+      "light": {
+        "background": "#FDFCF8",
+        "foreground": "#1A1C19",
+        "card": "#FFFFFF",
+        "card_foreground": "#1A1C19",
+        "primary": "#2F5233",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#E8F5E9",
+        "secondary_foreground": "#1B3B1F",
+        "muted": "#F0F0EE",
+        "muted_foreground": "#6C757D",
+        "accent": "#E07A5F",
+        "accent_foreground": "#FFFFFF",
+        "border": "#E2E2DF",
+        "input": "#E2E2DF",
+        "ring": "#2F5233"
+      },
+      "dark": {
+        "background": "#0F110F",
+        "foreground": "#EAECE9",
+        "card": "#181A18",
+        "card_foreground": "#EAECE9",
+        "primary": "#4CAF50",
+        "primary_foreground": "#000000",
+        "secondary": "#1E261E",
+        "secondary_foreground": "#81C784",
+        "muted": "#1F211F",
+        "muted_foreground": "#9CA3AF",
+        "accent": "#FF8A65",
+        "accent_foreground": "#000000",
+        "border": "#2A2D2A",
+        "input": "#2A2D2A",
+        "ring": "#4CAF50"
+      }
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "nature": {
+          "50": "#f2fcf5",
+          "100": "#e1f8e8",
+          "200": "#c3efd2",
+          "300": "#95e0b3",
+          "400": "#5cc88e",
+          "500": "#36ac72",
+          "600": "#268a58",
+          "700": "#216e49",
+          "800": "#1e573c",
+          "900": "#194833",
+          "950": "#0c281d"
+        },
+        "earth": {
+          "500": "#E07A5F",
+          "600": "#C45A40"
+        }
+      }
+    }
+  },
+  "layout": {
+    "spacing_system": "Use generous padding. p-4 is minimum for containers. p-6 or p-8 preferred for cards.",
+    "border_radius": "rounded-2xl for cards, rounded-xl for buttons, rounded-full for badges.",
+    "mobile_navigation": {
+      "type": "Bottom Tab Bar",
+      "style": "Fixed bottom, glassmorphism (backdrop-blur-lg), h-16 or h-20.",
+      "items": ["Inicio", "Cultivos", "Calendario", "Tareas", "Bitácora"]
+    },
+    "grids": {
+      "dashboard_bento": "grid grid-cols-2 md:grid-cols-4 gap-4",
+      "crops_list": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    }
+  },
+  "components": {
+    "cards": {
+      "default": "bg-card text-card-foreground rounded-2xl border border-border/50 shadow-sm hover:shadow-md transition-all duration-300",
+      "interactive": "cursor-pointer active:scale-[0.98] transition-transform",
+      "glass": "bg-white/80 dark:bg-black/60 backdrop-blur-md border border-white/20"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl h-12 px-6 font-semibold shadow-md active:translate-y-0.5",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-xl h-12 px-6 font-medium",
+      "outline": "border-2 border-primary text-primary hover:bg-primary/10 rounded-xl h-12 px-6 font-medium",
+      "ghost": "hover:bg-accent/10 text-foreground hover:text-accent rounded-xl h-10 px-4",
+      "floating_action": "fixed bottom-20 right-6 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center z-50 hover:scale-110 transition-transform"
+    },
+    "badges": {
+      "status_success": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800",
+      "status_warning": "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800",
+      "status_danger": "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 border border-red-200 dark:border-red-800",
+      "tag": "bg-secondary text-secondary-foreground text-xs font-medium px-2.5 py-0.5 rounded-full"
+    },
+    "inputs": {
+      "default": "h-12 rounded-xl border-input bg-background px-4 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    }
+  },
+  "visual_enhancers": {
+    "textures": {
+      "grain": "Use a subtle SVG noise overlay on the main background for texture (opacity 0.03)."
+    },
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "lifted": "shadow-[0_20px_50px_rgb(0,0,0,0.1)]"
+    },
+    "glassmorphism": "Use for the Bottom Nav and Sticky Headers: bg-background/80 backdrop-blur-md border-b border-border/50"
+  },
+  "assets": {
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 2px for small icons, 1.5px for large. Rounded line caps.",
+      "mapping": {
+        "dashboard": "LayoutGrid",
+        "crops": "Sprout",
+        "calendar": "Calendar",
+        "tasks": "CheckSquare",
+        "logbook": "BookOpen",
+        "inventory": "Package",
+        "harvest": "ShoppingBasket",
+        "settings": "Settings",
+        "add": "Plus"
+      }
+    },
+    "images": {
+      "crops_placeholder": "https://images.unsplash.com/photo-1723347101054-c246b0034f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwzfHxmcmVzaCUyMHZlZ2V0YWJsZXMlMjBnYXJkZW4lMjBoYXJ2ZXN0fGVufDB8fHx8MTc3MjczNzc1N3ww&ixlib=rb-4.1.0&q=85",
+      "hydroponics_bg": "https://images.unsplash.com/photo-1651592279293-c70b4f04be11?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHw0fHxoeWRyb3BvbmljJTIwZmFybWluZyUyMHN5c3RlbSUyMHNldHVwfGVufDB8fHx8MTc3MjczNzc1OHww&ixlib=rb-4.1.0&q=85",
+      "tomatoes": "https://images.unsplash.com/photo-1624668430039-0175a0fbf006?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHZlZ2V0YWJsZXMlMjBnYXJkZW4lMjBoYXJ2ZXN0fGVufDB8fHx8MTc3MjczNzc1N3ww&ixlib=rb-4.1.0&q=85",
+      "leaf_detail": "https://images.unsplash.com/photo-1557485061-236c892aef32?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxoeWRyb3BvbmljJTIwZmFybWluZyUyMHN5c3RlbSUyMHNldHVwfGVufDB8fHx8MTc3MjczNzc1OHww&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "animation": {
+    "principles": "Organic & Smooth. Avoid robotic linear ease.",
+    "transitions": "transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)]",
+    "micro_interactions": {
+      "button_press": "active:scale-95",
+      "card_hover": "hover:-translate-y-1 hover:shadow-lg",
+      "page_transition": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure text-muted-foreground has at least 4.5:1 contrast against background.",
+    "touch_targets": "All interactive elements must have min-h-[44px] min-w-[44px].",
+    "focus_states": "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+  },
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons.",
+    "Install 'date-fns' for calendar handling.",
+    "Use 'shadcn/ui' components for complex interactions (Dialog, Drawer, Calendar, Form, Select).",
+    "Use 'Drawer' component from shadcn for mobile bottom sheets (very important for 'Add Task' or 'Crop Details').",
+    "Use 'Sonner' for toasts.",
+    "For the Dashboard, use a Bento Grid layout: 'grid grid-cols-2 gap-4'. Key metric cards take 1 cell, 'Recent Tasks' takes 2 cells wide.",
+    "Implement the 'Floating Action Button' (FAB) on the Dashboard and Cultivos screens for adding new items.",
+    "The 'Bitácora' (Logbook) should look like a social feed: Image (optional) + Text + Tags + Date.",
+    "Use the provided image URLs for placeholders. Do not leave images empty.",
+    "Ensure 'dark mode' support is robust. Test text colors on dark backgrounds."
+  ]
+}
